@@ -63,6 +63,13 @@
           </v-btn>
           <span>Be notified when a new beer arrives</span>
         </v-tooltip>
+
+        <v-tooltip bottom>
+          <v-btn v-if="!wifi" icon slot="activator">
+            <v-icon>signal_wifi_off</v-icon>
+          </v-btn>
+          <span>Offline</span>
+        </v-tooltip>
       </div>
     </v-toolbar>
     <v-content>
@@ -114,6 +121,7 @@ export default {
       ],
       drawer: false,
       dialog: false,
+      wifi: window.navigator.onLine,
       beerFilter: '',
     }
   },
