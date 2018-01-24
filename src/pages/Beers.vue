@@ -1,5 +1,5 @@
 <template>
-  <v-layout>
+  <v-layout class="truncate-text">
     <v-list two-line class="list">
       <template v-for="beer in beers.beers">
         <v-list-tile avatar :key="beer.title" @click="">
@@ -51,5 +51,10 @@ export default {
 <style scoped>
 .list {
   width: 100%;
+}
+.truncate-text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 </style>
