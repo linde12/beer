@@ -109,7 +109,11 @@ const webpackConfig = merge(baseWebpackConfig, {
         {
           urlPattern: /^https:\/\/images\.punkapi\.com/,
           handler: 'cacheFirst'
-        }
+        },
+        {
+          urlPattern: /^https:\/\/fonts\.googleapis\.com/,
+          handler: 'cacheFirst'
+        },
       ]
     })
   ]
