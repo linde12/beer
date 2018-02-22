@@ -7,12 +7,12 @@ export default new Router({
     {
       path: '/',
       name: 'Home',
-      component: () => import('@/pages/Home'),
+      component: () => import('@/pages/home'),
     },
     {
       path: '/beers',
       name: 'Beers',
-      component: () => import('@/pages/Beers'),
+      component: () => import('@/pages/beers'),
     }
   ]
 })

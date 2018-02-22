@@ -1,4 +1,4 @@
-import beerapi from '@/api/beers'
+import beerapi from './api'
 
 const state = {
   fetching: false,

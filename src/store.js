@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import beers from './modules/beers'
+import beers from '@/pages/beers/store'
 
 Vue.use(Vuex)
 

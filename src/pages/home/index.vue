@@ -1,6 +1,6 @@
 <template>
   <v-layout justify-center align-center>
-    <img src="../assets/logo.png">
+    <img src="@/assets/logo.png">
     <h1>{{ msg }}</h1>
     <p><i>now with silly logo &trade;</i></p>
   </v-layout>

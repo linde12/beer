@@ -53,7 +53,7 @@
         placeholder="Search"
         style="max-width: 500px; min-width: 128px"
         v-model="beerFilter"
-        @input="debounceSearch"
+        @input="search"
       ></v-text-field>
 
       <div class="d-flex align-center" style="margin-left: auto">
@@ -81,16 +81,7 @@
 </template>
 
 <script>
-const debounce = (fn, wait) => {
-  let timeout;
-  return function() {
-    const ctx = this
-    const args = arguments
-    clearTimeout(timeout)
-    timeout = setTimeout(() => fn.apply(ctx, args), wait)
-  }
-}
-
+import debounce from '@/util/debounce'
 export default {
   name: 'app',
   computed: {
@@ -99,7 +90,7 @@ export default {
     },
   },
   methods: {
-    debounceSearch: debounce(function () {
+    search: debounce(function () {
       this.$store.dispatch('fetchBeers', {beer_name: this.beerFilter})
     }, 250)
   },
